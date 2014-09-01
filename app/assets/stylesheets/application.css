@@ -4688,6 +4688,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
     color: #605f60;
     padding-left: 20px;
     padding-right: 20px;
+    text-decoration:none;
 }
 
 .about-logo {
