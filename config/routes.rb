@@ -1,4 +1,12 @@
 Maderna::Application.routes.draw do
+  resources :users
+
+  resources :products
+
+  resources :pictures
+
+  resources :categories
+
   resources :welcomes
 
   # The priority is based upon order of creation: first created -> highest priority.
