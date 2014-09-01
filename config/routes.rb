@@ -1,4 +1,5 @@
 Maderna::Application.routes.draw do
+  get "admin/index"
   get "welcome/index"
   resources :contacts
 
