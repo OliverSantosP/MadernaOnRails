@@ -36,6 +36,13 @@ group :production do
 	gem 'rails_12factor' #Heroku gem that enables static assets and logging for heroku
     gem 'unicorn' #For running Heroku instance with unicorn
 end
+
+# Use ActiveModel has_secure_password
+gem 'bcrypt-ruby', '~> 3.0.0'
+
+gem 'bootstrap-sass', '~> 3.2.0'
+
+gem 'autoprefixer-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
