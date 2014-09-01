@@ -4666,8 +4666,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .adminlink {
-    float: none;
-    display: inline-block;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     font-family: 'AvenirMedium';
     -webkit-font-smoothing: antialiased;
