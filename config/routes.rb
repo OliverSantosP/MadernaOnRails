@@ -1,4 +1,6 @@
 Maderna::Application.routes.draw do
+  resources :abouts
+
   resources :users
 
   resources :products
