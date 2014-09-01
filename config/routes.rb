@@ -1,4 +1,5 @@
 Maderna::Application.routes.draw do
+  get "welcome/index"
   resources :contacts
 
   resources :abouts
