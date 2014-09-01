@@ -1,4 +1,6 @@
 Maderna::Application.routes.draw do
+  resources :contacts
+
   resources :abouts
 
   resources :users
