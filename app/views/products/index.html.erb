@@ -1,37 +1,98 @@
-<h1>Listing products</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Category</th>
-      <th>Mainpicture</th>
-      <th>Sliderpicture</th>
-      <th>User</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.name %></td>
-        <td><%= product.description %></td>
-        <td><%= product.category_id %></td>
-        <td><%= product.mainpicture %></td>
-        <td><%= product.sliderpicture %></td>
-        <td><%= product.user_id %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Product', new_product_path %>
+<div class="row row-products-centered">
+<div class="col-centered col-fixed">
+<a style="display:block" href="/products/1">
+<div class="box">
+<img src="/assets/1-Thum.jpg" alt="Product thumb."/>
+<div class="caption fade-caption">Vikta Table 103</div>
+</div>
+</a>
+</div>
+<div class="col-centered col-fixed">
+<a style="display:block" href="/products/1">
+<div class="box">
+<img src="/assets/2-Thum.jpg" alt="Product thumb." />
+<div class="caption fade-caption">Vikta Table 103</div>
+</div>
+</a>
+</div>
+<div class="col-centered col-fixed">
+<a style="display:block" href="/products/1">
+<div class="box">
+<img src="/assets/3-Thum.jpg" alt="Product thumb." />
+<div class="caption fade-caption">Vikta Table 103</div>
+</div>
+</a>
+</div>
+<div class="col-centered col-fixed">
+<a style="display:block" href="/products/1">
+<div class="box">
+<img src="/assets/6-Thum.jpg" alt="Product thumb." />
+<div class="caption fade-caption">Vikta Table 103</div>
+</div>
+</a>
+</div>
+<div class="col-centered col-fixed">
+<a style="display:block" href="/products/1">
+<div class="box">
+<img src="/assets/4-Thum.jpg" alt="Product thumb." />
+<div class="caption fade-caption">Vikta Table 103</div>
+</div>
+</a>
+</div>
+<div class="col-centered col-fixed">
+<a style="display:block" href="/products/1">
+<div class="box">
+<img src="/assets/8-Thum.jpg" alt="Product thumb." />
+<div class="caption fade-caption">Vikta Table 103</div>
+</div>
+</a>
+</div>
+<div class="col-centered col-fixed">
+<a style="display:block" href="/products/1">
+<div class="box">
+<img src="/assets/7-Thum.jpg" alt="Product thumb." />
+<div class="caption fade-caption">Vikta Table 103</div>
+</div>
+</a>
+</div>
+<div class="col-centered col-fixed">
+<a style="display:block" href="/products/1">
+<div class="box">
+<img src="/assets/5-Thum.jpg" alt="Product thumb." />
+<div class="caption fade-caption">Vikta Table 103</div>
+</div>
+</a>
+</div>
+<div class="col-centered col-fixed">
+<a style="display:block" href="/products/1">
+<div class="box">
+<img src="/assets/2-Thum.jpg" alt="Product thumb." />
+<div class="caption fade-caption">Vikta Table 103</div>
+</div>
+</a>
+</div>
+<div class="col-centered col-fixed">
+<a style="display:block" href="/products/1">
+<div class="box">
+<img src="/assets/9-Thum.jpg" alt="Product thumb." />
+<div class="caption fade-caption">Vikta Table 103</div>
+</div>
+</a>
+</div>
+<div class="col-centered col-fixed">
+<a style="display:block" href="/products/1">
+<div class="box">
+<img src="/assets/10-Thum.jpg" alt="Product thumb." />
+<div class="caption fade-caption">Vikta Table 103</div>
+</div>
+</a>
+</div>
+<div class="col-centered col-fixed">
+<a style="display:block" href="/products/1">
+<div class="box">
+<img src="/assets/11-Thum.jpg" alt="Product thumb." />
+<div class="caption fade-caption">Vikta Table 103</div>
+</div>
+</a>
+</div>
+</div>

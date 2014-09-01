@@ -1,34 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @product.category_id %>
-</p>
-
-<p>
-  <strong>Mainpicture:</strong>
-  <%= @product.mainpicture %>
-</p>
-
-<p>
-  <strong>Sliderpicture:</strong>
-  <%= @product.sliderpicture %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @product.user_id %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<div class="row row-centered">
+<div class="col-centered col-products-fixed">
+<img src="/assets/Product-1-Big.jpg" id="product-image" class="product-image" alt="Big product image."/>
+</div>
+<div class="col-centered-middle">
+<div class="product-text">
+<div class="product-title">
+<%= @product.name %>
+</div>
+<div class="product-description">
+<%= @product.description %>
+<div class="row">
+<div class="product-thumb">
+<img src="/assets/Supersmall-Thum1.jpg" alt="Product thumbnail." onclick='changeImage("/assets/Product-1-Big.jpg");'/>
+<img src="/assets/Supersmall-Thum2.jpg" alt="Product thumbnail." onclick='changeImage("/assets/Product-2-Big.jpg");'>
+<img src="/assets/Supersmall-Thum3.jpg" alt="Product thumbnail." onclick='changeImage("/assets/Product-3-Big.jpg");'>
+<img src="/assets/Supersmall-Thum4.jpg" alt="Product thumbnail." onclick='changeImage("/assets/Product-4-Big.jpg");'>
+</div>
+</div>
+</div>
+<div class="product-text-bottom hidden-sm hidden-xs"></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+function changeImage(a) {
+document.getElementById("product-image").src = a;
+}
+</script>
