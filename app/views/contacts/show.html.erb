@@ -1,34 +1,18 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
+<div class="row-centered">
+<div class="contact-text col-md-4 col-centered">
+<div class="contact-title">
   <%= @contact.name %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
+</div>
+<div class="contact-phone">
   <%= @contact.phone %>
-</p>
-
-<p>
-  <strong>Email:</strong>
+</div>
+<div class="contact-email">
   <%= @contact.email %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @contact.address %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @contact.city %>
-</p>
-
-<p>
-  <strong>Country:</strong>
+</div>
+<div class="contact-address">
+  <%= @contact.address %><br />
+  <%= @contact.city %><br />
   <%= @contact.country %>
-</p>
-
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+</div>
+</div>
+</div>
