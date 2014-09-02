@@ -433,6 +433,7 @@ table {
     margin-right: auto;
     vertical-align: center;
     display:block;
+    text-align:center;
 }
 
 .row-centered {
