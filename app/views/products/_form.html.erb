@@ -20,8 +20,8 @@
     <%= f.text_field :description %>
   </div>
   <div class="field">
-    <%= f.label :category_id %><br>
-    <%= f.number_field :category_id %>
+  <%= f.label :category %><br>
+  <%=f.collection_select(:category_id, Category.all, :id, :name, { :prompt => true}) %>
   </div>
   <div class="field">
     <%= f.label :mainpicture %><br>
@@ -30,10 +30,6 @@
   <div class="field">
     <%= f.label :sliderpicture %><br>
     <%= f.number_field :sliderpicture %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
   </div>
   <div class="actions">
     <%= f.submit %>
