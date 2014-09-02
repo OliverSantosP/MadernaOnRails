@@ -428,6 +428,13 @@ table {
     background: #d6ec94;*/
 }
 
+.centered{
+    margin-left:auto;
+    margin-right: auto;
+    vertical-align: center;
+    display:block;
+}
+
 .row-centered {
     text-align: center;
 }
