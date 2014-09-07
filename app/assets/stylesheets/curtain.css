@@ -6,7 +6,7 @@
 
     /*LEFT CURTAIN IMAGE CLASS*/
     img.curtainTop{
-        margin-left: 40%;
+        margin-left: calc(58% - 265px);
         margin-right:auto;
         text-align: center;
         position:absolute; /*absolute positioning is important*/
@@ -18,7 +18,7 @@
 
     /*RIGHT CURTAIN IMAGE CLASS*/
     img.curtainBottom{
-        margin-left:40%;
+        margin-left: calc(58% - 265px);
         margin-right:auto;
         text-align: center;
         position:absolute; /*absolute positioning is important*/
@@ -27,7 +27,7 @@
     }
 
     img.curtainMiddle{
-        margin-left: 40.3%;
+        margin-left: calc(58.3% - 265px);
         margin-right:auto;
         text-align: center;
         position:absolute; /*absolute positioning is important*/
@@ -52,7 +52,7 @@
     .content{
         position:relative; /*so we can center it*/
         margin:0px auto; /*center it*/
-        display:none; /*we don't want our users to see the content while the curtain images are loading*/
+        /*display:none; /*we don't want our users to see the content while the curtain images are loading*/
     }
 
     /*DESCRIPTION DIV CLASS (THE TEXT ON TOP LEFT SIDE IN THE DEMO)*/
