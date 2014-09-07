@@ -5,78 +5,98 @@
 	<link href="/assets/owl.carousel.css" media="all" rel="stylesheet" />
 	<link href="/assets/owl.theme.css" media="all" rel="stylesheet" />
 	<link href="/assets/owl.transitions.css" media="all" rel="stylesheet" />
+	<link href="/assets/curtain.css" media="all" rel="stylesheet" />
 	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
 	<%= csrf_meta_tags %>
 </head>
 <body>
+<!--START THE WRAPPER-->
+	<div class='curtain_wrapper'>
 
-	<div id="wrap">
-		<div class="navbar navbar-inverse" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#"><img src="/assets/Marco_Top.png" alt="Maderna top logo."/></a>
+		<!-- 2 CURTAIN IMAGES START HERE  -->
+		<img id='curtainTop' class='curtain curtainTop' src='/assets/Marco_Bottom2.png' />
+		<img id='curtainMiddle' class='curtain curtainMiddle' src='/assets/Marco_Middle.png' />
+		<img id='curtainBottom' class='curtain curtainBottom' src='/assets/Marco_Top.png' />
+		<!-- END IMAGES -->
+
+		<!-- START THE CONTENT DIV -->    
+		<div id='content' class='content'>
+			<!-- YOUR CONTENT HERE -->
+			<div id="wrap">
+				<div class="navbar navbar-inverse" role="navigation">
+					<div class="container">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#"><img src="/assets/Marco_Top.png" id="logoTop" alt="Maderna top logo."/></a>
+						</div>
+						<div class="navbar-collapse collapse">
+							<ul class="nav navbar-nav">
+
+								<li><div class="menulink-bar-active hidden-xs">|</div></li>
+
+								<li><a href="/welcome/index" class="menulink">Home</a></li>
+
+								<li><div class="menulink-bar-active hidden-xs">|</div></li>
+
+								<li><a href="/products" class="menulink">Products</a></li>
+
+								<li><div class="menulink-bar-active hidden-xs">|</div></li>
+
+								<li><a href="/abouts/1" class="menulink">About</a></li>
+
+
+								<li><div class="menulink-bar-active hidden-xs">|</div></li>
+
+								<li><a href="/contacts/1" class="menulink">Contact</a></li>
+
+								<li><div class="menulink-bar-active hidden-xs">|</div></li>
+							</ul>
+						</div><!--/.nav-collapse -->
+					</div>
 				</div>
-				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
+				<div class="container body-content">
+					<%= yield %>
 
-						<li><div class="menulink-bar-active hidden-xs">|</div></li>
 
-						<li><a href="/welcome/index" class="menulink">Home</a></li>
-						
-						<li><div class="menulink-bar-active hidden-xs">|</div></li>
-						
-						<li><a href="/products" class="menulink">Products</a></li>
+					
 
-						<li><div class="menulink-bar-active hidden-xs">|</div></li>
-						
-						<li><a href="/abouts/1" class="menulink">About</a></li>
+					<div class="navbar-header">
+						<img src="/assets/Marco_Bottom.png" class="logo-bottom" id="logoBottom" alt="Maderna bottom logo." />
+					</div>
 
-						
-						<li><div class="menulink-bar-active hidden-xs">|</div></li>
-						
-						<li><a href="/contacts/1" class="menulink">Contact</a></li>
-						
-						<li><div class="menulink-bar-active hidden-xs">|</div></li>
-					</ul>
-				</div><!--/.nav-collapse -->
+
+				</div>
+				<div id="push"></div>
+
+
 			</div>
-		</div>
-		<div class="container body-content">
-			<%= yield %>
-			<div class="navbar-header">
-				<img src="/assets/Marco_Bottom.png" class="logo-bottom" alt="Maderna bottom logo." />
-			</div>
-		</div>
-		<div id="push"></div>
-	</div>
-	<div id="footer">
-		<div class="footer">
-			<div class="row-centered gray-footer">
-				<div class="col-centered">
-					<div class="col-centered">
-						© Copyright 2014
+			<div id="footer">
+				<div class="footer">
+					<div class="row-centered gray-footer">
+						<div class="col-centered">
+							<div class="col-centered">
+								© Copyright 2014
+							</div>
+							<div class="col-centered"><div class="hidden-xs hidden-sm">•</div></div>
+							<div class="col-centered">
+								MADERNA, S.A.
+							</div>
+							<div class="col-centered">
+								Todos los derechos reservados
+							</div>
+							<div class="col-centered"><div class="hidden-xs hidden-sm">|</div></div>
+							<div class="col-centered">Síguenos en <a href="http://www.facebook.com"><img src="/assets/fb_icon.png" alt="Facebook logo." /></a><a href="http://www.twitter.com"><img src="/assets/tw_icon.png" alt="Twitter logo."/></a><a href="http://www.youtube.com"><img src="/assets/yt_icon.png" alt="Youtube logo." /></a></div>
+						</div>
 					</div>
-					<div class="col-centered"><div class="hidden-xs hidden-sm">•</div></div>
-					<div class="col-centered">
-						MADERNA, S.A.
-					</div>
-					<div class="col-centered">
-						Todos los derechos reservados
-					</div>
-					<div class="col-centered"><div class="hidden-xs hidden-sm">|</div></div>
-					<div class="col-centered">Síguenos en <a href="http://www.facebook.com"><img src="/assets/fb_icon.png" alt="Facebook logo." /></a><a href="http://www.twitter.com"><img src="/assets/tw_icon.png" alt="Twitter logo."/></a><a href="http://www.youtube.com"><img src="/assets/yt_icon.png" alt="Youtube logo." /></a></div>
 				</div>
 			</div>
-		</div>
-	</div>
-</body>
+		</body>
 
-</html>
+		</html>

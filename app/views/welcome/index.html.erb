@@ -29,3 +29,36 @@ $(document).ready(function () {
 	});
 });
 </script>
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function () {
+				//...animate the 2 curtain images to width of 50px with duration of 2 seconds...
+				
+				var top = $("#curtainTop" );
+				var middle = $("#curtainMiddle" );
+				var bottom = $("#curtainBottom" );
+				var content = $("#content" );
+
+				var logoTop = $("#logoTop");
+				var logoBottom = $("#logoBottom");
+
+                //Hiding logos
+				logoTop.animate({opacity: "0"},0);
+				logoBottom.animate({opacity: "0"},0);
+
+				//Animating curtain
+				top.delay(2000).animate({ bottom: "-=40%"},2000 );
+				middle.delay(2000).animate({ opacity: "0"},3000);
+				bottom.delay(2000).animate({ top: "-=21%"},2000);
+
+				//Hiding curtain
+				top.animate({ opacity: "0"},0 );
+				bottom.animate({ opacity: "0"},0 );
+				
+				//Showing content
+				content.delay(2000).fadeIn(2000);
+
+				//Showing logos
+				logoTop.animate({opacity: "1"},0);
+				logoBottom.animate({opacity: "1"},0);
+			});
+					</script>
