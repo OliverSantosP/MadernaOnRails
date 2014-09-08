@@ -1,15 +1,4 @@
-<!--START THE WRAPPER-->
-<div class='curtain_wrapper'>
 
-	<!-- 2 CURTAIN IMAGES START HERE  -->
-	<img id='curtainTop' class='curtain curtainTop' src='/assets/Marco_Bottom2.png' />
-	<img id='curtainMiddle' class='curtain curtainMiddle' src='/assets/Marco_Middle.png' />
-	<img id='curtainBottom' class='curtain curtainBottom' src='/assets/Marco_Top.png' />
-	<!-- END IMAGES -->
-
-	<!-- START THE CONTENT DIV -->    
-	<div id='content' class='content'>
-		<!-- YOUR CONTENT HERE -->
 		<div id="owl-carousel" class="owl-carousel">
 			<div>
 				<img src="/assets/Pictures-1.jpg" alt="Product 1" />
@@ -21,8 +10,7 @@
 				<img src="/assets/Pictures-3.jpg" alt="Product 3" />
 			</div>
 		</div>
-	</div>
-</div>
+	
 
 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
@@ -38,9 +26,8 @@
 				var logoTop = $("#logoTop");
 				var logoBottom = $("#logoBottom");
 
-				var carousel = $(".owl-carousel");
 
-				carousel.style.display = 'none';
+				
 
                 //Hiding logos
 				logoTop.animate({opacity: "0"},0);
@@ -64,14 +51,14 @@
 				logoTop.animate({opacity: "1"},0);
 				logoBottom.animate({opacity: "1"},0);
 
-				carrousel.style.display = 'block';
+						
 				
 			});
 </script>
 
 <script type="text/javascript">
 	$(document).ready(function () {
-		var owl = $("#products-carousel");
+var owl = $("#owl-carousel");
 		owl.owlCarousel({
 			items: 3,
 			center: true,
