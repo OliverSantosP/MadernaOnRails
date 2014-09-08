@@ -35,23 +35,25 @@
 
 				//Animating curtain
 				top.delay(2000).animate({ bottom: "-=40%"},2000 );
-				middle.delay(2000).animate({ opacity: "0"},3000);
+				middle.delay(2000).animate({ opacity: "0"},3000, function()
+					{content.fadeIn(2000);});
 				bottom.delay(2000).animate({ top: "-=21%"},2000);
 
-				//Hiding curtain
-				top.animate({ opacity: "0"},0 );
-				bottom.animate({ opacity: "0"},0 );
+				
 
 				
 				//Showing content
-				content.delay(3000).fadeIn(2000);
+				
 
 				//Showing logos
 				
 				logoTop.animate({opacity: "1"},0);
 				logoBottom.animate({opacity: "1"},0);
 
-						
+				//Hiding curtain
+				top.animate({ opacity: "0"},3000 );
+				bottom.animate({ opacity: "0"},3000 );
+
 				
 			});
 </script>

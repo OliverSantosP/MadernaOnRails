@@ -52,7 +52,7 @@
     .content{
         position:relative; /*so we can center it*/
         margin:0px auto; /*center it*/
-        /*display:none; /*we don't want our users to see the content while the curtain images are loading*/
+        display:none; /*we don't want our users to see the content while the curtain images are loading*/
     }
 
     /*DESCRIPTION DIV CLASS (THE TEXT ON TOP LEFT SIDE IN THE DEMO)*/
