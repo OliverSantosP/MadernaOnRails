@@ -123,6 +123,7 @@
 
     .owl-carousel.owl-loaded {
         display: block;
+        margin-top:-258px;
     }
 
     .owl-carousel.owl-loading {

@@ -1,58 +1,67 @@
 
-		<div id="owl-carousel" class="owl-carousel">
-			<div>
-				<img src="/assets/Pictures-1.jpg" alt="Product 1" />
-			</div>
-			<div>
-				<img src="/assets/Pictures-2.jpg" alt="Product 2" />
-			</div>
-			<div>
-				<img src="/assets/Pictures-3.jpg" alt="Product 3" />
-			</div>
+<img id='curtainBottom' class='curtain curtainBottom' src='/assets/Marco_Top.png' /> 
+<img id='curtainMiddle' class='curtain curtainMiddle' src='/assets/Marco_Middle.png' />
+<img id='curtainTop' class='curtain curtainTop' src='/assets/Marco_Bottom2.png' />
+
+
+
+
+<div id='content' class='content'>
+	<!-- YOUR CONTENT HERE -->
+
+	<div id="owl-carousel" class="owl-carousel">
+		<div>
+			<img src="/assets/Pictures-1.jpg" alt="Product 1" />
 		</div>
-	
+		<div>
+			<img src="/assets/Pictures-2.jpg" alt="Product 2" />
+		</div>
+		<div>
+			<img src="/assets/Pictures-3.jpg" alt="Product 3" />
+		</div>
+	</div>
+</div>
+
+
 
 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
 <script type="text/javascript">
 	$(document).ready(function () {
-				//...animate the 2 curtain images to width of 50px with duration of 2 seconds...
-				
-				var top = $("#curtainTop" );
-				var middle = $("#curtainMiddle" );
-				var bottom = $("#curtainBottom" );
-				var content = $("#content" );
 
-				var logoTop = $("#logoTop");
-				var logoBottom = $("#logoBottom");
+				var top = $("#curtainTop");
+				var middle = $("#curtainMiddle");
+				var bottom = $("#curtainBottom");
 
+				var logoTop = $("#logoTop").position();
+				//var logoBottom = $("#logoBottom").position();
 
-				
-
-                //Hiding logos
-				logoTop.animate({opacity: "0"},0);
-				logoBottom.animate({opacity: "0"},0);
+				$("#container").animate({opacity: "0"},0);
+				$("#container2").animate({opacity: "0"},0);
+				$("#container3").animate({opacity: "0"},0);
+				$("#content").animate({opacity: "0"},0);
 
 				//Animating curtain
-				top.delay(2000).animate({ bottom: "-=40%"},2000 );
-				middle.delay(2000).animate({ opacity: "0"},3000, function()
-					{content.fadeIn(2000);});
-				bottom.delay(2000).animate({ top: "-=21%"},2000);
+				bottom.delay(2000).animate({ top: "-167px"},2000 );
+				top.delay(2000).animate({ top: "352px"},2000 );
+				middle.delay(3000).animate({ opacity: "0"},2000, function()
+					{
+						$("#container").animate({opacity: "1"},0);
+						$("#container2").animate({opacity: "1"},0);
+						$("#container3").animate({opacity: "1"},0);
+				        $("#content").animate({opacity: "1"},0);
 
-				
+						$("#container").fadeIn(2000);
+						$("#content").fadeIn(2000);
+						$("#container2").fadeIn(2000);
+						$("#container3").fadeIn(2000);
 
-				
-				//Showing content
-				
+						top.animate({opacity: "0"},0);
+						bottom.animate({opacity: "0"},0);
 
-				//Showing logos
-				
-				logoTop.animate({opacity: "1"},0);
-				logoBottom.animate({opacity: "1"},0);
+						
 
-				//Hiding curtain
-				top.animate({ opacity: "0"},3000 );
-				bottom.animate({ opacity: "0"},3000 );
+					});
 
 				
 			});
@@ -60,7 +69,7 @@
 
 <script type="text/javascript">
 	$(document).ready(function () {
-var owl = $("#owl-carousel");
+		var owl = $("#owl-carousel");
 		owl.owlCarousel({
 			items: 3,
 			center: true,

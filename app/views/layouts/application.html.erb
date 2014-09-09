@@ -11,22 +11,11 @@
 
 	<%= csrf_meta_tags %>
 </head>
-<body>
-	<!--START THE WRAPPER-->
-	<div class='curtain_wrapper'>
-
-		<!-- 2 CURTAIN IMAGES START HERE  -->
-		<img id='curtainTop' class='curtain curtainTop' src='/assets/Marco_Bottom2.png' />
-		<img id='curtainMiddle' class='curtain curtainMiddle' src='/assets/Marco_Middle.png' />
-		<img id='curtainBottom' class='curtain curtainBottom' src='/assets/Marco_Top.png' />
-		<!-- END IMAGES -->
-
-		<!-- START THE CONTENT DIV -->    
-		<div id='content' class='content'>
+<body>					
 			<!-- YOUR CONTENT HERE -->
 			<div id="wrap">
 				<div class="navbar navbar-inverse" role="navigation">
-					<div class="container">
+					<div class="container" id="container">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 								<span class="sr-only">Toggle navigation</span>
@@ -68,16 +57,15 @@
 					
 
 					<div class="navbar-header">
-						<img src="/assets/Marco_Bottom.png" class="logo-bottom" id="logoBottom" alt="Maderna bottom logo." />
+						<img src="/assets/Marco_Bottom.png" class="logo-bottom" id="container2" alt="Maderna bottom logo." />
 					</div>
 
-				</div>
-			</div>
 		</div>
 		<div id="push"></div>
 
 
 	</div>
+	<div id="container3">
 	<div id="footer">
 		<div class="footer">
 			<div class="row-centered gray-footer">
@@ -97,6 +85,7 @@
 				</div>
 			</div>
 		</div>
+	</div>
 	</div>
 </body>
 
