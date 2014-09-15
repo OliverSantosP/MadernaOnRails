@@ -1,6 +1,5 @@
 class ContactsController < ApplicationController
-  before_action :set_contact, only: [:show, :edit, :update, :destroy]
-
+before_action :signed_in_user, only: [:edit, :update, :destroy, :create]
   # GET /contacts
   # GET /contacts.json
   def index
@@ -70,5 +69,9 @@ class ContactsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def contact_params
       params.require(:contact).permit(:name, :phone, :email, :address, :city, :country)
+    end
+
+    def signed_in_user
+      redirect_to signin_url, notice: "Please sign in." unless signed_in?
     end
 end

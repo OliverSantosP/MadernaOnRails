@@ -1,5 +1,5 @@
 class AboutsController < ApplicationController
-  before_action :set_about, only: [:show, :edit, :update, :destroy]
+before_action :signed_in_user, only: [:edit, :update, :destroy, :create]
 
   # GET /abouts
   # GET /abouts.json
@@ -70,5 +70,9 @@ class AboutsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def about_params
       params.require(:about).permit(:message, :user_id)
+    end
+
+    def signed_in_user
+      redirect_to signin_url, notice: "Please sign in." unless signed_in?
     end
 end

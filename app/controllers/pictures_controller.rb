@@ -1,5 +1,5 @@
 class PicturesController < ApplicationController
-  before_action :set_picture, only: [:show, :edit, :update, :destroy]
+  before_action :signed_in_user, only: [:edit, :update, :destroy, :create]
 
   # GET /pictures
   # GET /pictures.json
@@ -71,4 +71,8 @@ class PicturesController < ApplicationController
     def picture_params
       params.require(:picture).permit(:product_id, :path)
     end
-end
+
+    def signed_in_user
+      redirect_to signin_url, notice: "Please sign in." unless signed_in?
+    end
+  end

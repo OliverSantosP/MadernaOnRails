@@ -1,6 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  before_action :signed_in_user, only: [:edit, :update, :destroy, :create]
   # GET /products
   # GET /products.json
   def index
@@ -71,4 +70,10 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :description, :category_id, :mainpicture, :sliderpicture, :user_id)
     end
-end
+  end
+
+  
+    
+    def signed_in_user
+      redirect_to signin_url, notice: "Please sign in." unless signed_in?
+    end
