@@ -1,24 +1,24 @@
 <div class="centered">
-  <% provide(:title, "Sign in") %>
-  <h1>Sign in</h1>
+  <% provide(:title, "Sign in")%>
+  <div class="title">SIGN IN</div>
 
   <div class="row">
     <div class="span6 offset3">
       <%= form_for(:session, url: sessions_path) do |f| %>
 
-      <%= f.label :email %>
+      <%= f.label :email, class: "input_title" %>
+      <br>
       <%= f.text_field :email %>
       <br>
+      <%= f.label :password, class: "input_title" %>
       <br>
-      <%= f.label :password %>
       <%= f.password_field :password %>
       <br>
       <br>
       <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
       <% end %>
       <br>
-      <br>
-      <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+      <p><%= link_to "New User? Sign up.", signup_path, class: "subtitle" %></p>
     </div>
   </div>
 </div>

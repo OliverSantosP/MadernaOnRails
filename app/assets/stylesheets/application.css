@@ -2414,9 +2414,13 @@ textarea.input-lg {
     }
 
 .btn-primary {
-    color: #ffffff;
+    color: #000000;
     background-color: #428bca;
     border-color: #357ebd;
+     font-family: 'AvenirBook';
+     text-transform: uppercase !important;
+        -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
     .btn-primary:hover,
@@ -2427,6 +2431,7 @@ textarea.input-lg {
         color: #ffffff;
         background-color: #3276b1;
         border-color: #285e8e;
+        
     }
 
     .btn-primary:active,
@@ -4707,6 +4712,52 @@ textarea.input-group-sm > .input-group-btn > .btn {
     padding-right: 15px;
     max-width: 100%;
     max-height: 100%;
+}
+
+.title{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float: none;
+    font-family: 'AvenirBook';
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #605f60;
+    font-size: 3.1em;
+}
+
+.subtitle{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float: none;
+    font-family: 'AvenirBook';
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+    color: #605f60;
+    font-size: 1.0em;
+}
+
+.input_title{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float: none;
+    font-family: 'AvenirBook';
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+    color: #605f60;
+    font-size: 1.0em;
 }
 
 .contact-text {

@@ -1,21 +1,21 @@
 <div class="centered">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<div class="title">Name:</div>
+<br>
   <%= @user.name %>
-</p>
+<br>
 
-<p>
-  <strong>Email:</strong>
+<div class="title">Email:</div>
+<br>
   <%= @user.email %>
-</p>
-
-<p>
-  <strong>Password:</strong>
+<br>
+<div class="title">Password:</div>
+<br>
   <%= @user.password %>
-</p>
+<br>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+
+<%= link_to 'Edit', edit_user_path(@user), class: "subtitle" %> |
+<%= link_to 'Back', users_path, class: "subtitle" %>
 </div>

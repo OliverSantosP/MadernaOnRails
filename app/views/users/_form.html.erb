@@ -13,25 +13,25 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name, class: "input_title" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
+    <%= f.label :email, class: "input_title" %><br>
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :password %><br>
+    <%= f.label :password, class: "input_title" %><br>
     <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation, "Confirmation" %><br>
+    <%= f.label :password_confirmation, "Confirmation", class: "input_title" %><br>
     <%= f.password_field :password_confirmation %>
   </div>
 <div class="actions">
 <br>
 <%= f.submit "Create", class: "btn btn-large btn-primary" %>
 </div>
-
+<br>
 <% end %>
 

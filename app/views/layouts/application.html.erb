@@ -66,10 +66,12 @@
 			</div>
 		</div>
 		<div class="container body-content">
+			<div class="centered">
+				<% flash.each do |key, value| %>
+				<div class="alert alert-<%= key %>"><%= value %></div>
+				<% end %>
+			</div>
 			<%= yield %>
-
-
-
 
 			<div class="navbar-header">
 				<img src="/assets/Marco_Bottom.png" class="logo-bottom" id="container2" alt="Maderna bottom logo." />

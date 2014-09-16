@@ -11,23 +11,23 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
+  <div class="field", class: "input_title" >
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
+  <div class="field", class: "input_title" >
     <%= f.label :description %><br>
     <%= f.text_field :description %>
   </div>
-  <div class="field">
+  <div class="field", class: "input_title" >
   <%= f.label :category %><br>
   <%=f.collection_select(:category_id, Category.all, :id, :name, { :prompt => true}) %>
   </div>
-  <div class="field">
+  <div class="field", class: "input_title" >
     <%= f.label :mainpicture %><br>
     <%= f.number_field :mainpicture %>
   </div>
-  <div class="field">
+  <div class="field", class: "input_title" >
     <%= f.label :sliderpicture %><br>
     <%= f.number_field :sliderpicture %>
   </div>
