@@ -18,6 +18,10 @@
 <img src="/assets/Supersmall-Thum3.jpg" alt="Product thumbnail." onclick='changeImage("/assets/Product-3-Big.jpg");'>
 <img src="/assets/Supersmall-Thum4.jpg" alt="Product thumbnail." onclick='changeImage("/assets/Product-4-Big.jpg");'>
 </div>
+<br>
+<% if signed_in? %>
+<%= link_to 'Edit', edit_product_path(@product), class: "subtitle" %>
+<% end %>
 </div>
 </div>
 <div class="product-text-bottom hidden-sm hidden-xs"></div>

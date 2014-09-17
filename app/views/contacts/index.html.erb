@@ -1,4 +1,5 @@
-<h1>Listing contacts</h1>
+<div class="centered">
+<div class="title">Listing contacts</div>
 
 <table>
   <thead>
@@ -24,9 +25,9 @@
         <td><%= contact.address %></td>
         <td><%= contact.city %></td>
         <td><%= contact.country %></td>
-        <td><%= link_to 'Show', contact %></td>
-        <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-        <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', contact, class: "subtitle show" %></td>
+        <td><%= link_to 'Edit', edit_contact_path(contact), class: "subtitle edit" %></td>
+        <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' }, class: "subtitle destroy" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +35,5 @@
 
 <br>
 
-<%= link_to 'New Contact', new_contact_path %>
+<%= link_to 'New Contact', new_contact_path, class: "subtitle" %>
+</div>

@@ -12,9 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :message %><br>
-    <%= f.text_area :message %>
+    <%= f.label :message, class: "input_title" %><br>
+    <%= f.text_area :message, class: "form-control"%>
   </div>
+  <br>
   <div class="actions">
     <%= f.submit %>
   </div>

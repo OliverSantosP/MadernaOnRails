@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :signed_in_user, only: [:edit, :update, :destroy, :create]
+  before_action :signed_in_user, only: [:edit, :update, :destroy, :new]
   # GET /products
   # GET /products.json
   def index
@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @product = Product.find(params[:id])
   end
 
   # GET /products/new
@@ -18,6 +19,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    @product = Product.find(params[:id])
   end
 
   # POST /products

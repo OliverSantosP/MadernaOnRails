@@ -10,6 +10,7 @@ before_action :signed_in_user, only: [:edit, :update, :destroy, :create]
   # GET /abouts/1
   # GET /abouts/1.json
   def show
+    @about = About.find(params[:id])
   end
 
   # GET /abouts/new
@@ -19,6 +20,7 @@ before_action :signed_in_user, only: [:edit, :update, :destroy, :create]
 
   # GET /abouts/1/edit
   def edit
+    @about = About.find(params[:id])
   end
 
   # POST /abouts

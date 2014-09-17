@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-before_action :signed_in_user, only: [:edit, :update, :destroy, :create, :show]
+before_action :signed_in_user, only: [:edit, :update, :destroy, :new, :show]
   # GET /categories
   # GET /categories.json
   def index
@@ -9,6 +9,7 @@ before_action :signed_in_user, only: [:edit, :update, :destroy, :create, :show]
   # GET /categories/1
   # GET /categories/1.json
   def show
+     @category = Category.find(params[:id])
   end
 
   # GET /categories/new
@@ -18,6 +19,7 @@ before_action :signed_in_user, only: [:edit, :update, :destroy, :create, :show]
 
   # GET /categories/1/edit
   def edit
+    @category = Category.find(params[:id])
   end
 
   # POST /categories

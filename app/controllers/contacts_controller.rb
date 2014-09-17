@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-before_action :signed_in_user, only: [:edit, :update, :destroy, :create]
+before_action :signed_in_user, only: [:edit, :update, :destroy, :new]
   # GET /contacts
   # GET /contacts.json
   def index
@@ -9,6 +9,7 @@ before_action :signed_in_user, only: [:edit, :update, :destroy, :create]
   # GET /contacts/1
   # GET /contacts/1.json
   def show
+    @contact = Contact.find(params[:id])
   end
 
   # GET /contacts/new
@@ -18,6 +19,7 @@ before_action :signed_in_user, only: [:edit, :update, :destroy, :create]
 
   # GET /contacts/1/edit
   def edit
+    @contact = Contact.find(params[:id])
   end
 
   # POST /contacts

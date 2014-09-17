@@ -1,8 +1,6 @@
-
-<div class="row-centered">
-<div class="contact-text col-md-4 col-centered">
-<h1>Editing contact</h1>
+<div class="centered">
+<div class="title">Editing contact</div>
 <%= render 'form' %>
-<%= link_to 'Show', @contact %> |
-<%= link_to 'Back', contacts_path %>
-</div></div>
+<%= link_to 'Show', @contact, class: "subtitle" %> |
+<%= link_to 'Back', contacts_path, class: "subtitle" %>
+</div>

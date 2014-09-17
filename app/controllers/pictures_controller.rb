@@ -1,5 +1,5 @@
 class PicturesController < ApplicationController
-  before_action :signed_in_user, only: [:edit, :update, :destroy, :create]
+  before_action :signed_in_user, only: [:edit, :update, :destroy, :new, :show]
 
   # GET /pictures
   # GET /pictures.json
@@ -10,6 +10,7 @@ class PicturesController < ApplicationController
   # GET /pictures/1
   # GET /pictures/1.json
   def show
+    @picture = Picture.find(params[:id])
   end
 
   # GET /pictures/new
@@ -19,6 +20,7 @@ class PicturesController < ApplicationController
 
   # GET /pictures/1/edit
   def edit
+    @picture = Picture.find(params[:id])
   end
 
   # POST /pictures

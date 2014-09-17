@@ -10,32 +10,34 @@
       </ul>
     </div>
   <% end %>
-
+<div class="contact-text">
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label :name, class: "subtitle" %><br>
+    <%= f.text_field :name, class: "contact-title" %>
   </div>
   <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
+    <%= f.label :phone, class: "subtitle" %><br>
+    <%= f.text_field :phone, class: "contact-phone" %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.label :email, class: "subtitle" %><br><br>
+    <%= f.text_field :email, class: "contact-email" %>
   </div>
   <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
+    <%= f.label :address, class: "subtitle" %><br>
+    <%= f.text_field :address, class: "contact-address" %>
   </div>
   <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
+    <%= f.label :city, class: "subtitle" %><br>
+    <%= f.text_field :city, class: "contact-city" %>
   </div>
   <div class="field">
-    <%= f.label :country %><br>
-    <%= f.text_field :country %>
+    <%= f.label :country, class: "subtitle" %><br>
+    <%= f.text_field :country, class: "contact-country" %>
   </div>
+  <br>
   <div class="actions">
     <%= f.submit %>
+  </div>
   </div>
 <% end %>
