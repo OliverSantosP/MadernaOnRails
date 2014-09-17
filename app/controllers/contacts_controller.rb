@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-before_action :signed_in_user, only: [:edit, :update, :destroy, :new]
+before_action :signed_in_user, only: [:edit, :update, :destroy, :new, :index]
   # GET /contacts
   # GET /contacts.json
   def index
