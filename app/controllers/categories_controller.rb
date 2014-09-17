@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-before_action :signed_in_user, only: [:edit, :update, :destroy, :new, :show]
+before_action :signed_in_user, only: [:edit, :update, :destroy, :new, :show, :index]
   # GET /categories
   # GET /categories.json
   def index

@@ -1,5 +1,5 @@
 class AboutsController < ApplicationController
-before_action :signed_in_user, only: [:edit, :update, :destroy, :create]
+before_action :signed_in_user, only: [:edit, :update, :destroy, :create, :index]
 
   # GET /abouts
   # GET /abouts.json
