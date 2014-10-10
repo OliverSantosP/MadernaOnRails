@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row row-centered">
+<div class="col-centered col-products-fixed">
+<img src="/assets/1.jpg" id="product-image" class="product-image" alt="Big product image."/>
+</div>
+<div class="col-centered-middle">
+<div class="product-text">
+<div class="product-title">
+<%= @product.name %>
+</div>
+<div class="product-description">
+<%= @product.description %>
+<div class="row">
+<div class="product-thumb">
+<img src="/assets/1-supersmall.jpg" alt="Product thumbnail." onclick='changeImage("/assets/1.jpg");'/>
+<img src="/assets/2-supersmall.jpg" alt="Product thumbnail." onclick='changeImage("/assets/2.jpg");'>
+<img src="/assets/3-supersmall.jpg" alt="Product thumbnail." onclick='changeImage("/assets/3.jpg");'>
+<img src="/assets/4-supersmall.jpg" alt="Product thumbnail." onclick='changeImage("/assets/4.jpg");'>
+</div>
+<br>
+<% if signed_in? %>
+<%= link_to 'Edit', edit_product_path(@product), class: "subtitle" %>
+<% end %>
+</div>
+</div>
+<div class="product-text-bottom hidden-sm hidden-xs"></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+function changeImage(a) {
+document.getElementById("product-image").src = a;
+}
+</script>

@@ -13,6 +13,7 @@ Maderna::Application.routes.draw do
   match '/login',  to: 'sessions#new',         via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
+match '/products/2', to: 'products#show2',     via: 'get'
 
   resources :products
 
@@ -26,7 +27,7 @@ Maderna::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root to: 'welcome#index'
+  root to: 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
